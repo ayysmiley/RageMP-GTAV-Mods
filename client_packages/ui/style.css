@@ -1,0 +1,40 @@
+.fas {
+    font-size: 1vw;
+    margin-left: 0.25vw;
+}
+
+#timeBar {
+    position: absolute;
+    bottom: 0.5vw;
+    left: 46%;
+}
+
+#speedBar {
+    position: absolute;
+    bottom: 2.1vw;
+    left: 46%;
+    display: none;
+}
+
+.uiBar {
+    background: #2c2c2c;
+    padding: 0.25vw;
+    color: #fff;
+    width: 8vw;
+    height: 1vw;
+    border-radius: 0.1vw;
+}
+
+.uiBarInfo {
+    position: absolute;
+    right: 0.75vw;
+    font-family: 'Open Sans';
+    font-size: 0.75vw;
+    top: 0.2vw;
+    font-weight: 600;
+    letter-spacing: -0.01vw;
+}
+
+.noselect {
+    user-select: none;
+}

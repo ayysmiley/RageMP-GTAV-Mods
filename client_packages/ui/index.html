@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <div id="speedBar">
+        <div class="uiBar">
+            <span class="fas fa-tachometer-alt"></span>
+            <div class="uiBarInfo noselect"><span class="speedNumber">69</span> <i class="mph">mph</i></div>
+        </div>
+    </div>
+    <div id="timeBar">
+        <div class="uiBar">
+            <span class="fas fa-clock"></span>
+            <div class="uiBarInfo noselect"><span class="timeDisplay">ERROR</span></div>
+        </div>
+    </div>
+    <script>
+        /* Time START */
+        function updateTime(hours, minutes, ampm) {
+            document.getElementsByClassName('timeDisplay')[0].innerHTML = hours + ":" + minutes + " " + ampm;
+        }
+        /* Time END */
+
+        /* Speedometer START */
+        function updateSpeed(speed) {
+            document.getElementsByClassName('speedNumber')[0].innerHTML = speed;
+            if (speed > 0 && speed <= 59) {
+                document.getElementsByClassName('mph')[0].style.color = "green";
+            } else if (speed >= 60 && speed <= 99) {
+                document.getElementsByClassName('mph')[0].style.color = "yellow";
+            } else if (speed >= 100) {
+                document.getElementsByClassName('mph')[0].style.color = "red";
+            } else {
+                document.getElementsByClassName('mph')[0].style.color = "white";
+            }
+        }
+
+        function hideSpeedometer() {
+            document.getElementById('speedBar').style.display = "none";
+        }
+
+        function showSpeedometer() {
+            document.getElementById('speedBar').style.display = "block";
+        }
+        /* Speedometer END */
+    </script>
+</body>
+
+</html>
